@@ -1,0 +1,19 @@
+name: Upterm SSH Server
+
+on:
+  workflow_dispatch:
+
+jobs:
+  upterm-session:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup upterm session
+        uses: lhotari/action-upterm@v1
+        with:
+          # 如果不限制权限（任何人拿到命令都能连），保持下面两项注释即可
+          # limit-access-to-actor: true
+          # limit-access-to-users: your-github-username
