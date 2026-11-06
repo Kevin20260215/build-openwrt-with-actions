@@ -15,5 +15,5 @@ jobs:
         uses: lhotari/action-upterm@v1
         with:
           # 如果不限制权限（任何人拿到命令都能连），保持下面两项注释即可
-          # limit-access-to-actor: true
+          limit-access-to-actor: true
           # limit-access-to-users: your-github-username
